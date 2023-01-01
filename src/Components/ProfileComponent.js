@@ -36,8 +36,8 @@ class ProfileComponent extends Component{
     async componentDidUpdate(prevProps,prevState){
         console.log("Profile componentDidUpdate"); //
         if((this.state.userInfo.company != undefined && prevState.userInfo.company !== this.state.userInfo.company)){
-            console.log(prevState.userInfo.company);
-            console.log(this.state.userInfo.company);
+            // console.log(prevState.userInfo.company);
+            // console.log(this.state.userInfo.company);
             this.setState({userInfo: {avatar_url:this.state.userInfo.avatar_url,company:this.state.userInfo.company, location:this.state.userInfo.location + " (Current Work Location)"}});
         }
         // if(prevProps.name != this.state.userInfo.company ){
@@ -45,6 +45,9 @@ class ProfileComponent extends Component{
         //         userInfo : {company} = this.state.userInfo.company
         //     });
         // }
+    };
+    componentWillUnmount(){
+        console.log("Profile componentWillUnmount"); //set 6
     };
     render(){        
         console.log("Profile render"); //set1
