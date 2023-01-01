@@ -17,8 +17,10 @@ class ProfileComponent extends Component{
         super(props);
 
         this.state = {
-            email : "punuru.sowmya@gmail.com",
-            phone: "8976658870"
+            userInfo:{
+                company : "test company",
+                location : "test location"
+            }
         };
         console.log("Profile Constructor"); //set1
     };
@@ -27,7 +29,7 @@ class ProfileComponent extends Component{
         const json = await data.json();
         console.log(json);
         this.setState({
-            email : json.url
+            userInfo : json
         });
         console.log("Profile componentDidMount"); //set2
     };
@@ -36,8 +38,9 @@ class ProfileComponent extends Component{
         return (
         <div>
             <h3>Name : {this.props.name}</h3>
-            <h3>email : {this.state.email}</h3>
-            <h3>Phone Number : {this.state.phone}</h3>
+            <h3>Company : {this.state.userInfo.company}</h3>
+            <h3>Location : {this.state.userInfo.location}</h3>
+            <img src={this.state.userInfo.avatar_url} alt="yet to load image"/>
         </div>
     );
     }

@@ -36,7 +36,7 @@ class AboutUsComponent extends  React.Component {
                 <h3>Team Captain : Harshita Mangla</h3>
                 <h4>Team Size : 10</h4>
                 <h5>We all meet in Namaste React BootCamp</h5>
-                <h6>Host for BootCamp : Akshay</h6>
+                <h5>Host for BootCamp : Akshay</h5>
             </React.Fragment>
         );      
     }
