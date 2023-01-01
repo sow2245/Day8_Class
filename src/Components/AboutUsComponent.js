@@ -23,6 +23,9 @@ class AboutUsComponent extends  React.Component {
         super(props);
         console.log("About Constructor"); //set1
     };
+    componentDidMount(){
+        console.log("About componentDidMount"); //set3
+    };
     render(){
         console.log("About Render"); //set1
         return(
