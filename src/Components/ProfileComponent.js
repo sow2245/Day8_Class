@@ -16,7 +16,7 @@ class ProfileComponent extends Component{
     render(){
         return (
         <div>
-            <h3>Name : Punuru Sowmya Reddy</h3>
+            <h3>Name : {this.props.name}</h3>
         </div>
     );
     }
