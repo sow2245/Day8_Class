@@ -9,6 +9,7 @@ import { createBrowserRouter,RouterProvider,Outlet, Link } from "react-router-do
 import AboutUsComponent from "./Components/AboutUsComponent.js";
 import ErrorComponent   from "./Components/ErrorComponent.js"
 import TeamMemberComponent from "./Components/TeamMemberComponent.js";
+import ProfileComponent from "./Components/ProfileComponent.js";
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
@@ -79,7 +80,13 @@ const appRouter = createBrowserRouter([
             },
             {
                 path : "/aboutus",
-                element : <AboutUsComponent/>
+                element : <AboutUsComponent/>,
+                children : [
+                    {
+                        path : "profile",
+                        element : <ProfileComponent/>
+                    }
+                ]
             }
         ]
     }
