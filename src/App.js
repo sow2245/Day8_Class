@@ -84,7 +84,7 @@ const appRouter = createBrowserRouter([
                 children : [
                     {
                         path : "profile",
-                        element : <ProfileComponent/>
+                        element : <ProfileComponent name = "Punuru Sowmya Reddy"/>
                     }
                 ]
             }
