@@ -26,6 +26,9 @@ class AboutUsComponent extends  React.Component {
     componentDidMount(){
         console.log("About componentDidMount"); //set3
     };
+    componentDidUpdate(){
+        console.log("About componentDidUpdate"); //
+    };
     render(){
         console.log("About Render"); //set1
         return(

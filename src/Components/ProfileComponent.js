@@ -33,6 +33,19 @@ class ProfileComponent extends Component{
         });
         console.log("Profile componentDidMount"); //set2
     };
+    async componentDidUpdate(prevProps,prevState){
+        console.log("Profile componentDidUpdate"); //
+        if((this.state.userInfo.company != undefined && prevState.userInfo.company !== this.state.userInfo.company)){
+            console.log(prevState.userInfo.company);
+            console.log(this.state.userInfo.company);
+            this.setState({userInfo: {avatar_url:this.state.userInfo.avatar_url,company:this.state.userInfo.company, location:this.state.userInfo.location + " (Current Work Location)"}});
+        }
+        // if(prevProps.name != this.state.userInfo.company ){
+        //     this.setState({
+        //         userInfo : {company} = this.state.userInfo.company
+        //     });
+        // }
+    };
     render(){        
         console.log("Profile render"); //set1
         return (
