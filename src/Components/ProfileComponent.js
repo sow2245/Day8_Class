@@ -22,7 +22,13 @@ class ProfileComponent extends Component{
         };
         console.log("Profile Constructor"); //set1
     };
-    componentDidMount(){
+    async componentDidMount(){
+        const data = await fetch("https://api.github.com/users/sow2245");
+        const json = await data.json();
+        console.log(json);
+        this.setState({
+            email : json.url
+        });
         console.log("Profile componentDidMount"); //set2
     };
     render(){        
