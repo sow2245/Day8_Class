@@ -20,8 +20,10 @@ class ProfileComponent extends Component{
             email : "punuru.sowmya@gmail.com",
             phone: "8976658870"
         };
-    }
+        console.log("Profile Constructor"); //set1
+    };
     render(){
+        console.log("Profile render"); //set1
         return (
         <div>
             <h3>Name : {this.props.name}</h3>
