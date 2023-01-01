@@ -22,7 +22,10 @@ class ProfileComponent extends Component{
         };
         console.log("Profile Constructor"); //set1
     };
-    render(){
+    componentDidMount(){
+        console.log("Profile componentDidMount"); //set2
+    };
+    render(){        
         console.log("Profile render"); //set1
         return (
         <div>
