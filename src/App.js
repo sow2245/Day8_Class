@@ -57,7 +57,9 @@ const SearchTeamMembersComponent=()=>{
 const AppLayout =()=>(
     <>
     <HeadingComponent/>
-    <Outlet/>
+    <div className="body">
+        <Outlet/>
+    </div>
     </>
 );
 
@@ -74,12 +76,12 @@ const appRouter = createBrowserRouter([
             {
                 path : "/teammember/:id",
                 element : <TeamMemberComponent/>
+            },
+            {
+                path : "/aboutus",
+                element : <AboutUsComponent/>
             }
         ]
-    },
-    {
-        path : "/aboutus",
-        element : <AboutUsComponent/>
     }
 ]);
 
