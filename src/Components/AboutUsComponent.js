@@ -19,7 +19,12 @@ import { title } from '../Common/Constants.js';
 
 ////Same as above but with classes
 class AboutUsComponent extends  React.Component {
+    constructor(props) {
+        super(props);
+        console.log("About Constructor"); //set1
+    };
     render(){
+        console.log("About Render"); //set1
         return(
             <React.Fragment>
                 <h1>About Us</h1>
